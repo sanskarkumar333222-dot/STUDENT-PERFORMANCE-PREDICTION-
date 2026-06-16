@@ -14,9 +14,9 @@ with open('../Model/features.pkl', 'rb') as f:
 
 # input fields
 gender = st.selectbox("Gender", ["Male", "Female"])
-attendance = st.slider("Attendance Rate (%)", 0, 100, 80)
-study_hours = st.slider("Study Hours Per Week", 0, 20, 5)
-previous_grade = st.number_input("Previous Grade", min_value=0, max_value=100, value=70)
+attendance = st.slider("Attendance Rate (%)", 0, 100, 0)       
+study_hours = st.slider("Study Hours Per Week", 0, 20, 0)      
+previous_grade = st.number_input("Previous Grade", min_value=0, max_value=100, value=0) 
 extracurricular = st.slider("Extracurricular Activities (count)", 0, 5, 1)
 parental_support = st.selectbox("Parental Support", ["Low", "Medium", "High"])
 online_classes = st.selectbox("Took Online Classes?", ["Yes", "No"])
@@ -43,3 +43,5 @@ if st.button("Predict"):
         st.write("Performance: Average")
     else:
         st.write("Performance: Needs Improvement")
+if attendance < 40 or study_hours < 2 or previous_grade < 40:
+    st.warning("⚠️ Very low inputs detected. Student is at high risk of poor performance.")
