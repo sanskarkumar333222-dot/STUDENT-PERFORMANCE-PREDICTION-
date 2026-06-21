@@ -21,6 +21,7 @@ A web application is built using Streamlit where you can enter student details a
 - Columns: 12
 
 Main features used:
+
 - Gender
 - Attendance Rate
 - Study Hours Per Week
@@ -46,6 +47,7 @@ Best model: Random Forest Regressor (highest R2 score)
 ## Evaluation Metrics
 
 Since this is a regression problem we used:
+
 - MAE (Mean Absolute Error)
 - RMSE (Root Mean Squared Error)
 - R2 Score
@@ -80,6 +82,7 @@ Student_Performance_Prediction/
 ## How to Run
 
 **Step 1 - Install libraries**
+
 ```
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost streamlit
 ```
@@ -89,6 +92,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost streamlit
 Open Notebook/student_performance.ipynb and run all cells
 
 **Step 3 - Run the Streamlit app**
+
 ```
 cd Streamlit_App
 streamlit run app.py
